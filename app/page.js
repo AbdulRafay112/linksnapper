@@ -63,7 +63,7 @@ export default function Home() {
               className="border-2 px-4 py-2 text-center md:w-[80%] sm:[w-80%] w-[200px]"
             />
             <button onClick={generate} className="btn px-6 py-2 text-white md:w-[80%] sm:[w-80%] w-[200px]">Shorten URL</button>
-            {generated && <> <span>Your URL is </span> <code><Link target="_blank" href={generated} >{generated}</Link></code></>}
+            {generated && <> <span className="text-sm">Your URL is </span> <code className="text-sm"><Link target="_blank" href={generated} >{generated}</Link></code></>}
           </div>
           <div className="box border-2 flex flex-col items-center px-14 py-10 gap-6 white ">
             <h2 className="text-xl font-bold">
