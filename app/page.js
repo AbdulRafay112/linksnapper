@@ -31,19 +31,20 @@ export default function Home() {
         setGenerated(`${process.env.NEXT_PUBLIC_HOST}/${shorturl}`)
         alert(result.message)
         console.log(result)
+      
       })
       .catch((error) => {
         console.error(error)
-      });
+      })
+    
   }
-
 
   return (
     <>
       <main>
         <div className="section-1 flex flex-col items-center gap-6">
           <h1 className="my-6 font-extrabold text-5xl blue">Short URL</h1>
-          <div className="box border-2 flex flex-col items-center px-14 py-10 gap-6 white w-[758px]">
+          <div className="box border-2 flex flex-col items-center px-14 py-10 gap-6 white ">
             <h2 className="text-3xl font-bold ">
               Paste the URL to be Shortened
             </h2>
@@ -51,7 +52,7 @@ export default function Home() {
               type="text"
               value={url}
               placeholder="enter your URL"
-              className="border-2 px-4 py-2 text-center w-[80%]"
+              className="border-2 px-4 py-2 text-center md:w-[80%] sm:[w-80%] w-[200px] "
               onChange={(e)=>{setUrl(e.target.value)}}
             />
             <input
@@ -59,12 +60,12 @@ export default function Home() {
               value={shorturl}
               placeholder="enter your short URL"
               onChange={(e)=>{setShorturl(e.target.value)}}
-              className="border-2 px-4 py-2 text-center w-[80%]"
+              className="border-2 px-4 py-2 text-center md:w-[80%] sm:[w-80%] w-[200px]"
             />
-            <button onClick={generate} className="btn px-6 py-2 text-white">Shorten URL</button>
+            <button onClick={generate} className="btn px-6 py-2 text-white md:w-[80%] sm:[w-80%] w-[200px]">Shorten URL</button>
             {generated && <> <span>Your URL is </span> <code><Link target="_blank" href={generated} >{generated}</Link></code></>}
           </div>
-          <div className="box border-2 flex flex-col items-center px-14 py-10 gap-6 white">
+          <div className="box border-2 flex flex-col items-center px-14 py-10 gap-6 white ">
             <h2 className="text-xl font-bold">
               Want More? Try Premium Features!
             </h2>
@@ -73,9 +74,9 @@ export default function Home() {
               UTM builder, QR codes, browser extension, app integrations and
               support
             </p>
-            <button className="btn px-6 py-2 text-white">Create Account</button>
+            <button className="btn px-6 py-2 text-white md:w-[80%] sm:[w-80%] w-[200px]">Create Account</button>
           </div>
-          <div className="max-w-[758px]">
+          <div className="max-w-[758px] lg:w-[758px] md:w-[500px] sm:w-[350px] w-[250px] 2xl:w-[758px]">
             <h2 className="text-xl font-bold">
               Simple and fast URL shortener!
             </h2>
@@ -94,7 +95,7 @@ export default function Home() {
               </span>
             </p>
           </div>
-          <div className="max-w-[758px]">
+          <div className="max-w-[758px] lg:w-[758px] md:w-[500px] sm:w-[350px] w-[250px] 2xl:w-[758px]">
             <h2 className="text-xl font-bold">Shorten, share and track</h2>
             <p>
               Your shortened URLs can be used in publications, documents,
@@ -104,7 +105,7 @@ export default function Home() {
               counter.
             </p>
           </div>
-          <div className="grid grid-cols-3 max-w-[758px] gap-16 text-center my-7">
+          <div className="grid md:grid-cols-3 grid-cols-2 sm:grid-cols-3 max-w-[758px] gap-16 text-center my-7 lg:w-[758px] md:w-[500px] sm:w-[350px] w-[250px] 2xl:w-[758px]">
             <div className="box flex1">
               <span>
                 <svg

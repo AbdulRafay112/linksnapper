@@ -8,6 +8,7 @@
 .white{
     background: #fff;
     max-width: 758px;
+    width:250px;
     box-shadow: 0 1px 4px #ccc;
     border-radius: 10px;
 }
@@ -26,3 +27,23 @@
 .border{
     border-top:5px solid #2c87c5;
 }
+@media screen and (min-width: 480px) {
+   .white{
+    width:350px;
+   }
+  }
+@media screen and (min-width: 768px) {
+   .white{
+    width:500px;
+   }
+  }
+@media screen and (min-width: 1024px) {
+   .white{
+    width:758px;
+   }
+  }
+@media screen and (min-width: 1536px) {
+   .white{
+    width:758px;
+   }
+  }
